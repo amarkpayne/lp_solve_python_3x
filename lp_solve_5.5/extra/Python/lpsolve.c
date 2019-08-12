@@ -4693,6 +4693,7 @@ static void mainloop(structlpsolve *lpsolve)
                 routines[i].routine(lpsolve);
                 END_INTERRUPT_IMMEDIATELY_IN_FOREIGN_CODE;
         }
+signal(SIGINT, SIG_DFL);
 }
 
 callerPrototype(drivername)
